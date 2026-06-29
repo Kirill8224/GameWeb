@@ -1,0 +1,33 @@
+body{
+    text-align: center;
+}
+.active {
+    text-decoration: none;
+    font-size: 30px;
+    display: inline-flex;     /* Позволяет задавать размеры и центрировать текст внутри */
+    align-items: center;      /* Центрирует текст по вертикали */
+    justify-content: center;  /* Центрирует текст по горизонтали */
+    
+    height: 43px;
+    width: 83px;
+    border: 3px solid #838382;  
+    
+    box-shadow: 
+      0 0 10px #838382,        
+      0 0 20px #838382,        
+      inset 0 0 5px #838382;   
+    
+    transition: all 0.3s ease; /* Плавное изменение всех свойств, включая размеры */
+}
+
+.Noactive {
+    text-decoration: none;
+    font-size: 28px;
+    display: inline-flex;     /* Позволяет задавать размеры и центрировать текст внутри */
+    align-items: center;      /* Центрирует текст по вертикали */
+    justify-content: center;  /* Центрирует текст по горизонтали */
+    border: 2px solid #838382;
+    height: 40px;
+    width: 80px;
+}
+  
