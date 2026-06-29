@@ -1,12 +1,14 @@
 import { GetGamesApi } from "../api/GetGames"
-import { useState, useEffect } from "react"
-
+import {useState,  useEffect } from "react"
+import type { GamesType } from "../types"
+import { GetGame } from "./Game"
+//import { useTraks } from "../bbl/UseSTate"
 export function GetGames(){
-    const [Games, SetGames] = useState<any[]>([])
+    const [Games, SetGames] = useState<GamesType[]>([])
     useEffect(()=>{
         GetGamesApi().then((Data)=> SetGames(Data)) }, [])
     console.log(Games)
-    return(<>
-    <h1>список игр</h1>
-    </>)
+    return(Games.map((Game)=>{return(<>
+    <GetGame Game= {Game}/>
+    </>)}))
 }
