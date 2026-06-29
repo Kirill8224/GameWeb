@@ -1,5 +1,6 @@
 import '../styles/index.css'
-export function GetGame({ Game }){
+import type { GamesType } from '../types'
+export function GetGame( { Game }: { Game: GamesType } ){
 //    console.log('игра', Game)
     return(<>
     <div className="Game">
