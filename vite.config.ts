@@ -1,11 +1,8 @@
 import { defineConfig } from 'vite'
-import react, { reactCompilerPreset } from '@vitejs/plugin-react'
-import babel from '@rolldown/plugin-babel'
+import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// https://vite.dev
 export default defineConfig({
-  plugins: [
-    react(),
-    babel({ presets: [reactCompilerPreset()] })
-  ],
+  plugins: [react()],
+  base: '/GameWeb/', // Только название репозитория со слэшами с двух сторон
 })
