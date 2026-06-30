@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 export function Loading({ Games }: { Games: any[] }) {
   // Проверка: если данные еще грузятся (массив пустой)
