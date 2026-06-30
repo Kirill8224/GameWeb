@@ -1,11 +1,35 @@
+/* Медиа-запрос для мобильных устройств (экраны меньше 768px) */
+@media (max-width: 768px) {
+    .Game {
+        width: 100%;           /* Карточка занимает всю ширину экрана телефона */
+        box-sizing: border-box; /* Чтобы рамка (border) не вылезала за края экрана */
+        border-left: none;     /* Опционально: убираем боковые рамки на мобилке */
+        border-right: none;    
+    }
+
+    .mainAvatar {
+        width: 100%;           /* Картинка растягивается на всю ширину карточки */
+        height: auto;          /* Высота подстраивается автоматически без искажений */
+        object-fit: cover;     /* Картинка красиво заполняет пространство, если пропорции разные */
+    }
+
+    body {
+        padding: 0 10px;       /* Небольшие отступы по бокам, чтобы текст не лип к экрану телефона */
+        box-sizing: border-box;
+    }
+}
+.Games{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .Game {
     display: flex;
     border-style: solid;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     width: 400px;
-    margin-bottom: 20px;    /* Чтобы карточки не слипались друг с другом */
+    margin-bottom: 20px;    
 }
 .mainAvatar{
     width: 400px;
