@@ -11,3 +11,30 @@ export type GamesType= {
     thumbnail: string,
     title: string,
 }
+
+export type InfoGameType ={
+    description: string,
+    developer: string,
+    freetogame_profile_url: string,
+    game_url: string,
+    genre: string,
+    id: number,
+    platform: string,
+    publisher: string,
+    release_date: string,
+    minimum_system_requirements: {
+        graphics: string,
+        memory: string,
+        os: string,
+        processor: string,
+        storage: string,
+    },
+    screenshots:{
+        id: number,
+        image: string
+    }[],
+    status: string,
+    thumbnai: string,
+    title: string
+
+}

@@ -1,3 +1,17 @@
+.infoImg{
+  padding: 5px;
+  height: 300px;
+  width: 600px;
+}
+a{
+  text-decoration: none;
+  font-size: 30px;
+}
+.infoImgs{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 /* Медиа-запрос для мобильных устройств (экраны меньше 768px) */
 @media (max-width: 768px) {
     /* 1. Сбрасываем ограничения для всех оберток над карточками */
@@ -55,7 +69,11 @@
 .mainAvatar{
     width: 400px;
 }
+span{
+  font-size: 20px;
+}
 p {
+    font-size: 20px;
     color: rgb(3, 3, 177);
     font-family: 'Playfair Display', Georgia, serif;
     font-style: italic; /* особенно красиво выглядит в курсиве */

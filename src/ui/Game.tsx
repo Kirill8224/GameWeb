@@ -1,9 +1,18 @@
 import '../styles/index.css'
 import type { GamesType } from '../types'
-export function GetGame( { Game }: { Game: GamesType } ){
+//import { useState } from 'react'
+//import { InfoGame } from './InfoGame'
+interface GetGamesProps {
+    Game: GamesType
+    Id: number;
+    SetId: React.Dispatch<React.SetStateAction<number>>
+  }
+export function GetGame( { Game, SetId }: GetGamesProps  ){
+//    const [GameI, SetGameI] = useState(null)
+//    const [Id, SetId]= useState(0)
 //    console.log('игра', Game)
     return(<>
-    <div className="Game">
+    <div className="Game" onClick={()=>{SetId(Game.id)}}>
         <h1>Название: {Game.title}</h1>
         <p>краткое описание: {Game.short_description}</p>
         <p>Разработала игру компния: {Game.developer} </p>
@@ -13,3 +22,4 @@ export function GetGame( { Game }: { Game: GamesType } ){
     </div>
     </>)
 }
+//InfoGame(Game.id, GameI, SetGameI)
