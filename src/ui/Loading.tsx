@@ -1,6 +1,6 @@
 
 
-export function Loading({ Games }: { Games: any[] }) {
+export function Loading({ Games }: { Games: any[] } | any) {
   // Проверка: если данные еще грузятся (массив пустой)
   if (!Games || Games.length === 0) {
     return (

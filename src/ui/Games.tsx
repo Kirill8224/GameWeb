@@ -18,11 +18,10 @@ export function GetGames({}: GetGamesProps){
         GetGamesApi().then((Data)=> SetGames(Data)) }, [])
     if(Id != 0){
         return(<>
-        <button className="active" onClick={()=>{SetId(0)}}>Games</button>
+        <button className="active" onClick={()=>{SetId(0)}}>Назад</button>
         <InfoGame Id= {Id} />
         </>)
     }
-    console.log(Games)
     if (Games.length === 0) {
         return <Loading Games={Games} />
     }

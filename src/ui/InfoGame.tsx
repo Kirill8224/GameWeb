@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import { Loading } from './Loading.tsx'
 import type { InfoGameType } from "../types"
 import { GetGameApi } from "../api/GetGame"
 import { useState } from "react"
@@ -9,7 +10,7 @@ export function InfoGame({ Id }: { Id: number }){
         GetGameApi(Id).then((Data)=>{SetGameI(Data)})
     }, [])
     if(GameI === null){
-    return(<h1>Загрузка</h1>)}
+    return(<Loading />)}
     else{
     return(<>
     <div className="InfoGame">
@@ -30,6 +31,5 @@ export function InfoGame({ Id }: { Id: number }){
         <a href={GameI.game_url}>играть</a>
     </div>
     <Infoimage Images={GameI.screenshots}/>
-    {console.log(GameI)}
     </>
     )}}
