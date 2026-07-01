@@ -12,7 +12,7 @@ export function InfoGame({ Id }: { Id: number }){
     return(<h1>Загрузка</h1>)}
     else{
     return(<>
-    <div>
+    <div className="InfoGame">
         <h1 style={{textAlign: "center"}}>{GameI.title} </h1>
         <p>{GameI.description}</p>
         <span>Жанр: {GameI.genre}, </span>

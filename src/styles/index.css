@@ -7,6 +7,10 @@ a{
   text-decoration: none;
   font-size: 30px;
 }
+.InfoGame{
+  padding: 5px;
+  
+}
 .infoImgs{
   display: flex;
   flex-direction: row;
@@ -14,10 +18,19 @@ a{
 }
 /* Медиа-запрос для мобильных устройств (экраны меньше 768px) */
 @media (max-width: 768px) {
+  .InfoGame{
+    padding: 5px;
+    width: 100%;
+    max-width: 100% !important;;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
     /* 1. Сбрасываем ограничения для всех оберток над карточками */
     body, 
     #root, 
     div:has(> .Game) { 
+      padding: 5px;
       width: 100% !important;
       max-width: 100% !important;
       padding: 0 !important;
@@ -30,6 +43,7 @@ a{
   
     /* 2. Жестко растягиваем саму карточку на всю ширину экрана */
     .Game {
+      padding: 5px;
       width: 100vw !important; /* Ровно 100% от ширины экрана телефона */
       max-width: 100vw !important;
       min-width: 100vw !important;
@@ -80,9 +94,9 @@ p {
   }
   
     
-  
+
 body {
-    background-color: #ff000042;
+    background-color: #f5bffc42;
     display: flex;
     flex-direction: column;
     align-items: center;    /* Выровняет всё содержимое по центру горизонтали */
@@ -98,7 +112,7 @@ body {
     justify-content: center;  /* Центрирует текст по горизонтали */
     
     height: 43px;
-    width: 83px;
+    width: 105px;
     border: 3px solid #838382;  
     
     box-shadow: 
@@ -117,6 +131,6 @@ body {
     justify-content: center;  /* Центрирует текст по горизонтали */
     border: 2px solid #838382;
     height: 40px;
-    width: 80px;
+    width: 100px;
 }
   
