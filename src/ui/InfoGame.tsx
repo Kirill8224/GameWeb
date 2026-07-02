@@ -16,17 +16,18 @@ export function InfoGame({ Id }: { Id: number }){
     <div className="InfoGame">
         <h1 style={{textAlign: "center"}}>{GameI.title} </h1>
         <p>{GameI.description}</p>
-        <span>Жанр: {GameI.genre}, </span>
-        <span>Разработчик: {GameI.developer}, </span>
-        <span>Издатель: {GameI.publisher}, </span>
-        <span>Игра для {GameI.platform}.</span>
-        <h3>Системные требования:</h3>
+        <span>Жанр: {GameI?.genre}, </span>
+        <span>Разработчик: {GameI?.developer}, </span>
+        <span>Издатель: {GameI?.publisher}, </span>
+        <span>Игра для {GameI?.platform}.</span>
+        {GameI.minimum_system_requirements ? (<>
+            <h3>Системные требования:</h3>
         <ul>
-            <li>оперативная система: {GameI.minimum_system_requirements.os}</li>
-            <li>оперативная память: {GameI.minimum_system_requirements.memory}</li>
-            <li>процессор: {GameI.minimum_system_requirements.processor}</li>
-            <li>Объём: {GameI.minimum_system_requirements.storage}</li>
-        </ul>
+            <li>оперативная система: {GameI.minimum_system_requirements?.os}</li>
+            <li>оперативная память: {GameI.minimum_system_requirements?.memory}</li>
+            <li>процессор: {GameI.minimum_system_requirements?.processor}</li>
+            <li>Объём: {GameI.minimum_system_requirements?.storage}</li>
+        </ul></>) : ''}
         <div><a href={GameI.freetogame_profile_url}>игровой сайт</a></div>
         <a href={GameI.game_url}>играть</a>
     </div>

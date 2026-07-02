@@ -17,7 +17,6 @@ export function Shooters(){
         return(<>
         <button className="active" onClick={()=>SetId(0)}>Назад</button>
         <InfoGame Id= {Id}/>
-        {console.log('Айди', Id)}
         </>)
     }
     return(Games.map((Game)=>{
