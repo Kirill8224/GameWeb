@@ -21,11 +21,13 @@ a{
 @media (max-width: 768px) {
   .InfoGame > img {
     padding: 5px;
-    width: 1250;
-    display: block; /* Изменено с flex на block */
-    margin: 0 auto; /* Центрирует картинку по горизонтали */
-    object-fit: cover; /* Чтобы картинка красиво заполняла пространство */
+    width: 1250px; /* ОБЯЗАТЕЛЬНО добавлены px */
+    max-width: 100%; /* Защита от вылезания картинки за экраны телефонов */
+    display: block; 
+    margin: 0 auto; 
+    object-fit: cover; 
   }
+  
   
   .InfoGame{
     padding: 5px;
