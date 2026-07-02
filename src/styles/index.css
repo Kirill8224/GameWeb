@@ -19,6 +19,14 @@ a{
 }
 /* Медиа-запрос для мобильных устройств (экраны меньше 768px) */
 @media (max-width: 768px) {
+  .InfoGame > img {
+    padding: 5px;
+    width: 1250;
+    display: block; /* Изменено с flex на block */
+    margin: 0 auto; /* Центрирует картинку по горизонтали */
+    object-fit: cover; /* Чтобы картинка красиво заполняла пространство */
+  }
+  
   .InfoGame{
     padding: 5px;
     width: 100%;
@@ -113,7 +121,7 @@ body {
   justify-content: center; /* Центрирует текст по горизонтали */
 
   height: 43px;
-  width: 105px;
+  width: 110px;
   border: 3px solid #838382;
 
   box-shadow: 0 0 10px #838382,
@@ -141,7 +149,7 @@ body {
   justify-content: center; /* Центрирует текст по горизонтали */
 
   height: 43px;
-  width: 145px;
+  width: 155px;
   border: 3px solid #838382;
 
   box-shadow: 0 0 10px #838382,
@@ -158,7 +166,7 @@ body {
   justify-content: center; /* Центрирует текст по горизонтали */
 
   height: 43px;
-  width: 140px;
+  width: 145px;
   border: 3px solid #838382;
 
   box-shadow: 0 0 10px #838382,
