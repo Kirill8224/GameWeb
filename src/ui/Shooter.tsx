@@ -1,9 +1,5 @@
-import type { GamesType } from "../types"
-type Shooter= {
-    Game: GamesType,
-    SetId: React.Dispatch<React.SetStateAction<number>>
-}
-export function Shooter({Game, SetId}: Shooter){
+import type { GameTypeUi } from "../types";
+export function Shooter({Game, SetId}: GameTypeUi){
     return(<>
     <div className="Game" onClick={() =>SetId(Game.id)}>
         <h1>Название: {Game.title}</h1>

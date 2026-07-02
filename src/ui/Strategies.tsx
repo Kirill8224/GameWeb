@@ -17,5 +17,5 @@ export function Strategies(){
     if(Games.length < 1){
         return(<Loading />)
     }
-    return(Games.map((Game)=>{return(<Strategy key={Game.id} Game= {Game} setId= {setId}/>)}))
+    return(Games.map((Game)=>{return(<Strategy key={Game.id} Game= {Game} SetId= {setId}/>)}))
 }

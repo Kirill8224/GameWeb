@@ -27,7 +27,7 @@ export function GetGames({}: GetGamesProps){
     }
     return(Games.map((Game)=>{return(<>
     <div className="Games">
-    <GetGame Game= {Game} Id= {Id} SetId= {SetId}/>
+    <GetGame Game= {Game} SetId= {SetId}/>
     </div>
     </>)}))
 }

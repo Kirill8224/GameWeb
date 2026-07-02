@@ -1,5 +1,5 @@
 import type { GameTypeUi } from "../types";
-export function Strategy({Game, SetId}: GameTypeUi){
+export function WindowsGame({Game, SetId}: GameTypeUi){
     return(<>
         <div className="Game" onClick={() =>SetId(Game.id)}>
             <h1>Название: {Game.title}</h1>
