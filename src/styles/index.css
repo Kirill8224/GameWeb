@@ -33,7 +33,7 @@ a{
   
   
   .InfoGame{
-    padding: 5px;
+    padding: 10px;
     width: 100%;
     max-width: 100% !important;;
     display: flex !important;
@@ -119,6 +119,7 @@ body {
     margin: 0;              /* Сбросит стандартные отступы браузера */
 }
 .active {
+  padding: 5px;
   text-decoration: none;
   font-size: 30px;
   display: inline-flex; /* Позволяет задавать размеры и центрировать текст внутри */
@@ -137,6 +138,7 @@ body {
 }
 
 .Noactive {
+  padding: 5px;
   text-decoration: none;
   font-size: 28px;
   display: inline-flex; /* Позволяет задавать размеры и центрировать текст внутри */
@@ -147,6 +149,7 @@ body {
   width: 100px;
 }
 .activeStrategies{
+  padding: 5px;
   text-decoration: none;
   font-size: 30px;
   display: inline-flex; /* Позволяет задавать размеры и центрировать текст внутри */
@@ -164,6 +167,7 @@ body {
   transition: all 0.3s ease; /* Плавное изменение всех свойств, включая размеры */
 }
 .NoactiveStrategies{
+  padding: 5px;
   text-decoration: none;
   font-size: 28px;
   display: inline-flex; /* Позволяет задавать размеры и центрировать текст внутри */
