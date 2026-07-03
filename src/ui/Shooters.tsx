@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { ShooterApi } from "../api/ShooterApi"
 import { Loading } from "./Loading"
-import { Shooter } from "./Shooter"
 import { InfoGame } from "./InfoGame"
+import { GetGame } from "./Game";
 import type { GamesType } from "../types"
 export function Shooters(){
     const [Games, SetGames]= useState<GamesType[]>([])
@@ -20,6 +20,6 @@ export function Shooters(){
         </>)
     }
     return(Games.map((Game)=>{
-        return(<Shooter Game= {Game} SetId= {SetId}/>)
+        return(<GetGame Game= {Game} SetId= {SetId}/>)
     }))
 }

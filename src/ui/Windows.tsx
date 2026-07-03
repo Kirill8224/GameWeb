@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { WindowsApi } from "../api/Windows";
-import { WindowsGame } from "./windowsGame";
+import { GetGame } from "./Game";
 import type { GamesType } from "../types";
 import { Loading } from "./Loading";
 import { InfoGame } from "./InfoGame";
@@ -19,5 +19,5 @@ export function Windows(){
     if(Games.length< 1){
         return(<Loading />)
     }
-    return(Games.map((Game)=>{return(<WindowsGame Game= {Game} SetId={setId} />)}))
+    return(Games.map((Game)=>{return(<GetGame Game= {Game} SetId={setId} />)}))
 }

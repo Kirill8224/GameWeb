@@ -1,9 +1,6 @@
 import '../styles/index.css'
 import type { GameTypeUi } from "../types";
 export function GetGame({Game, SetId}: GameTypeUi){
-//    const [GameI, SetGameI] = useState(null)
-//    const [Id, SetId]= useState(0)
-//    console.log('игра', Game)
     return(<>
     <div className="Game" onClick={()=>{SetId(Game.id)}}>
         <h1>Название: {Game.title}</h1>
