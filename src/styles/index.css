@@ -88,7 +88,7 @@ a{
     border-style: solid;
     flex-direction: column;
     justify-content: center;
-    width: 400px;
+    width: 810px;
     margin-bottom: 20px;    
 }
 .mainAvatar{
@@ -123,7 +123,7 @@ body {
   justify-content: center; /* Центрирует текст по горизонтали */
 
   height: 43px;
-  width: 110px;
+  width: 120px;
   border: 3px solid #838382;
 
   box-shadow: 0 0 10px #838382,
@@ -162,19 +162,12 @@ body {
 }
 .NoactiveStrategies{
   text-decoration: none;
-  font-size: 30px;
+  font-size: 28px;
   display: inline-flex; /* Позволяет задавать размеры и центрировать текст внутри */
   align-items: center; /* Центрирует текст по вертикали */
   justify-content: center; /* Центрирует текст по горизонтали */
-
-  height: 43px;
-  width: 145px;
-  border: 3px solid #838382;
-
-  box-shadow: 0 0 10px #838382,
-              0 0 20px #838382,
-              inset 0 0 5px #838382;
-
-  transition: all 0.3s ease; /* Плавное изменение всех свойств, включая размеры */
+  border: 2px solid #838382;
+  height: 40px;
+  width: 150px;
 }
   

@@ -7,6 +7,7 @@ import { Shooters } from './Shooters'
 import { Browsers } from "./Browsers"
 import  { GetGames } from "./Games"
 import { useState } from "react"
+import { Pvp } from "./Pvp"
 function WebGame() {
   const [Id, SetId]= useState(0)
   return (
@@ -15,8 +16,9 @@ function WebGame() {
         <NavLink to={'/'} className={(props)=>props.isActive ? 'active' : 'Noactive'}>Игры</NavLink>-
         <NavLink to={'/shooters'} className={(props)=>props.isActive ? 'active' : 'Noactive'}>Шутер</NavLink>-
         <NavLink to={'/Strategies'} className={(props)=>props.isActive ? 'activeStrategies' : 'NoactiveStrategies'}>Стратегии</NavLink>-
-        <NavLink to={'/windows'} className={(props)=>props.isActive ? 'active' : 'Noactive'}>Windows</NavLink>-
-        <NavLink to={'/browser'} className={(props)=>props.isActive ? 'activeStrategies' : 'NoactiveStrategies'}>Браузерные</NavLink>
+        <NavLink to={'/windows'} className={(props)=>props.isActive ? 'activeStrategies' : 'NoactiveStrategies'}>Windows</NavLink>-
+        <NavLink to={'/browser'} className={(props)=>props.isActive ? 'activeStrategies' : 'NoactiveStrategies'}>Браузерные</NavLink>-
+        <NavLink to={'/pvp'} className={(props)=>props.isActive ? 'active' : 'Noactive'}>ПВП</NavLink>
       </div>
       <Routes>
         <Route path={'/'} element={<GetGames Id= {Id} SetId= {SetId} />} />
@@ -24,6 +26,7 @@ function WebGame() {
         <Route path={"/Strategies"} element= {<Strategies />}></Route>
         <Route path={"/windows"} element={<Windows />}></Route>
         <Route path={"/browser"} element={<Browsers />}></Route>
+        <Route path={"/pvp"} element={<Pvp />}></Route>
       </Routes>
     </>
   )
