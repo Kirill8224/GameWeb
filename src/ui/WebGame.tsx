@@ -13,11 +13,11 @@ function WebGame() {
   return (
     <>
       <div className="Navigations">
-        <NavLink to={'/'} className={(props)=>props.isActive ? 'active' : 'Noactive'}>Игры</NavLink>-
-        <NavLink to={'/shooters'} className={(props)=>props.isActive ? 'active' : 'Noactive'}>Шутер</NavLink>-
-        <NavLink to={'/Strategies'} className={(props)=>props.isActive ? 'activeStrategies' : 'NoactiveStrategies'}>Стратегии</NavLink>-
-        <NavLink to={'/windows'} className={(props)=>props.isActive ? 'activeStrategies' : 'NoactiveStrategies'}>Windows</NavLink>-
-        <NavLink to={'/browser'} className={(props)=>props.isActive ? 'activeStrategies' : 'NoactiveStrategies'}>Браузер</NavLink>-
+        <NavLink to={'/'} className={(props)=>props.isActive ? 'active' : 'Noactive'}>Игры</NavLink>
+        <NavLink to={'/shooters'} className={(props)=>props.isActive ? 'active' : 'Noactive'}>Шутер</NavLink>
+        <NavLink to={'/Strategies'} className={(props)=>props.isActive ? 'activeStrategies' : 'NoactiveStrategies'}>Стратегии</NavLink>
+        <NavLink to={'/windows'} className={(props)=>props.isActive ? 'activeStrategies' : 'NoactiveStrategies'}>Windows</NavLink>
+        <NavLink to={'/browser'} className={(props)=>props.isActive ? 'activeStrategies' : 'NoactiveStrategies'}>Браузер</NavLink>
         <NavLink to={'/pvp'} className={(props)=>props.isActive ? 'active' : 'Noactive'}>ПВП</NavLink>
       </div>
       <Routes>
