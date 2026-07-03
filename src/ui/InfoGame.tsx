@@ -12,8 +12,9 @@ export function InfoGame({ Id }: { Id: number }){
     if(GameI === null){
     return(<Loading />)}
     else{
-    return(<>
-    <div className="InfoGame">
+    return(
+    <div className="InfoGame" key={Id}>
+        <div>
         <h1 style={{textAlign: "center"}}>{GameI.title} </h1>
         <p>{GameI.description}</p>
         <span>Жанр: {GameI?.genre}, </span>
@@ -30,7 +31,7 @@ export function InfoGame({ Id }: { Id: number }){
         </ul></>) : ''}
         <div><a href={GameI.freetogame_profile_url}>игровой сайт</a></div>
         <a href={GameI.game_url}>играть</a>
+        </div>
+        <Infoimage Images={GameI.screenshots}/>
     </div>
-    <Infoimage Images={GameI.screenshots}/>
-    </>
     )}}

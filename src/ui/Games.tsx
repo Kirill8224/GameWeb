@@ -2,7 +2,7 @@ import { GetGamesApi } from "../api/GetGames"
 import { Loading } from "./Loading"
 import { InfoGame } from "./InfoGame"
 import '../styles/index.css'
-import {useState,  useEffect } from "react"
+import {useState,  useEffect, useMemo } from "react"
 import type { GamesType } from "../types"
 import { GetGame } from "./Game"
 //import { useTraks } from "../bbl/UseSTate"
@@ -14,6 +14,8 @@ interface GetGamesProps {
 export function GetGames({}: GetGamesProps){
     const [Id, SetId]= useState(0)
     const [Games, SetGames] = useState<GamesType[]>([])
+    const [quantity, setQuantity]= useState<number>(30)
+    const GamesRen: GamesType[]= useMemo(()=>{return Games.slice(0, quantity)}, [Games, quantity])
     useEffect(()=>{
         GetGamesApi().then((Data)=> SetGames(Data)) }, [])
     if(Id != 0){
@@ -22,14 +24,17 @@ export function GetGames({}: GetGamesProps){
         <InfoGame Id= {Id} />
         </>)
     }
-    if (Games.length === 0) {
+    if (GamesRen.length === 0) {
         return <Loading Games={Games} />
     }
-    return(Games.map((Game)=>{return(<>
-    <div className="Games">
-    <GetGame Game= {Game} SetId= {SetId}/>
+    return(<div>
+    {GamesRen.map((Game)=>{return(
+    <div key={Game.id} className="Games">
+        <GetGame Game= {Game} SetId={SetId}/>
     </div>
-    </>)}))
+    )})}
+    <button className="active" onClick={()=>{setQuantity(quantity + 30)}}>ещё</button>
+    </div>)
 }
 
 

@@ -8,7 +8,9 @@ export function Infoimage({Images} : {Images: ScreenType}){
         return <p>Скриншоты для этой игры отсутствуют</p>;
     }
     return(Images.map((image)=>{
-        return(<img className='infoImg' src={image.image} alt="скриншот игры" />
+        return(<div key={image.id}>
+        <img className='infoImg' src={image.image} alt="скриншот игры" />
+        </div>
         )
     }))
 }

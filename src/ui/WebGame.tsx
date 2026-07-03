@@ -10,8 +10,7 @@ import { useState } from "react"
 import { Pvp } from "./Pvp"
 function WebGame() {
   const [Id, SetId]= useState(0)
-  return (
-    <>
+  return (<>
       <div className="Navigations">
         <NavLink to={'/'} className={(props)=>props.isActive ? 'active' : 'Noactive'}>Игры</NavLink>
         <NavLink to={'/shooters'} className={(props)=>props.isActive ? 'active' : 'Noactive'}>Шутер</NavLink>
@@ -28,7 +27,7 @@ function WebGame() {
         <Route path={"/browser"} element={<Browsers />}></Route>
         <Route path={"/pvp"} element={<Pvp />}></Route>
       </Routes>
-    </>
+      </>
   )
 }
 
