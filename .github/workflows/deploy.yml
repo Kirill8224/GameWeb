@@ -22,12 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v5 # Обновлено с v4.2.2 до v5
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4.2.0
+        uses: actions/setup-node@v5 # Обновлено с v4.2.0 до v5
         with:
-          node-version: 22 # Обновили до стабильной 22-й версии Node
+          node-version: 22
           cache: 'npm'
 
       - name: Install dependencies
@@ -37,15 +37,13 @@ jobs:
         run: npm run build
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5 # Обновили до v5
+        uses: actions/configure-pages@v6 # Обновлено с v5 до v6
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3.0.1 # Зафиксировали стабильную версию для Pages
+        uses: actions/upload-pages-artifact@v3 # Обновлено до стабильной v3
         with:
           path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
-
-
+        uses: actions/deploy-pages@v4.2.0 # Обновлено до фиксированной стабильной версии
