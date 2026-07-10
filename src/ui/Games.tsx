@@ -1,23 +1,23 @@
-import { GetGamesApi } from "../api/GetGames"
+
 import { Loading } from "./Loading"
 import { InfoGame } from "./InfoGame"
 import '../styles/index.css'
-import {useState,  useEffect, useMemo } from "react"
+import {useState, useMemo } from "react"
 import type { GamesType } from "../types"
 import { GetGame } from "./Game"
 //import { useTraks } from "../bbl/UseSTate"
-interface GetGamesProps {
+//interface GetGamesProps {
 //    Game: GamesType,
-    Id: number,
-    SetId: React.Dispatch<React.SetStateAction<number>>
-}
-export function GetGames({}: GetGamesProps){
+//    Id: number,
+ //   SetId: React.Dispatch<React.SetStateAction<number>>,
+ //   Games: GamesType[]}
+export function GetGames({Games}: {Games: GamesType[]}){
     const [Id, SetId]= useState(0)
-    const [Games, SetGames] = useState<GamesType[]>([])
+//    const [Games, SetGames] = useState<GamesType[]>([])
     const [quantity, setQuantity]= useState<number>(30)
     const GamesRen: GamesType[]= useMemo(()=>{return Games.slice(0, quantity)}, [Games, quantity])
-    useEffect(()=>{
-        GetGamesApi().then((Data)=> SetGames(Data)) }, [])
+//    useEffect(()=>{
+//        GetGamesApi().then((Data)=> SetGames(Data)) }, [])
     if(Id != 0){
         return(<>
         <button className="active" onClick={()=>{SetId(0)}}>Назад</button>

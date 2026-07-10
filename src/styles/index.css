@@ -1,4 +1,21 @@
-
+.Search{
+  font-size: 30px;
+  background-color: black;
+  color: azure;
+  border-style: none;
+  width: 950px;
+  height: 40px;
+  margin: 10px;
+}
+.Search::placeholder{
+  color: rgb(186, 187, 189);
+  font-size: 25px;
+}
+.Search:hover{
+  width: 955px;
+  height: 45px;
+  margin: 5px;
+}
 .infoImg{
   margin: 5px;
   height: 300px;
@@ -89,7 +106,7 @@ a{
     border-style: solid;
     flex-direction: column;
     justify-content: center;
-    width: 850px;
+    width: 950px;
     margin-bottom: 20px;    
 }
 .mainAvatar{
