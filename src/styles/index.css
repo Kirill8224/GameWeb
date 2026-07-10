@@ -36,6 +36,26 @@ a{
 }
 /* Медиа-запрос для мобильных устройств (экраны меньше 768px) */
 @media (max-width: 768px) {
+  .Search{
+    font-size: 30px;
+    background-color: black;
+    color: azure;
+    border-style: none;
+    width: 90% !important;
+    max-width: 95% !important;
+    height: 40px;
+    margin: 10px;
+  }
+  .Search::placeholder{
+    color: rgb(186, 187, 189);
+    font-size: 25px;
+  }
+  .Search:hover{
+    width: 95% !important;
+    max-width: 100% !important;
+    height: 45px;
+    margin: 5px;
+  }
   .InfoGame > img {
     margin: 5px;
     width: 1000px; /* ОБЯЗАТЕЛЬНО добавлены px */
